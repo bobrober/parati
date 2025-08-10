@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix</title>
+    <link rel="stylesheet" href="Estilos.css">
+</head>
+
+<body>
+    <div class="Controles" id="menuControles">
+        <!-- Botón para minimizar el menú -->
+        <button class="minimize-btn" id="btnMinimizar" title="Minimizar menú">−</button>
+        <label>velocidad: <input type="range" id="speedcontrol" min="1" max="30" value="10"> </label>
+        <label>Texto: <input type="text" id="textoinput" value="Te quiero"> </label>
+        <label>Color: <input type="color" id="colorinput" value="#ff69bb"> </label>
+
+    </div>
+    <canvas id="MatrixCanvas"> </canvas>
+    <!-- Script principal para los efectos -->
+    <script src="Script.js"></script>
+    <script>
+        // Script para minimizar/maximizar el menú
+        const menu = document.getElementById('menuControles');
+        const btn = document.getElementById('btnMinimizar');
+        btn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            menu.classList.toggle('minimized');
+            btn.textContent = menu.classList.contains('minimized') ? '+' : '−';
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+* {
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0%;
+    overflow: hidden;
+    background-color: black;
+}
+
+canvas {
+    display: block;
+}
+
+.titulo {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-family: 'Comic Sans', Arial, sans-serif;
+    font-size: 3em;
+    color: #d1c1ca;
+    z-index: 100;
+    text-shadow: 0 0 20px #ff69bb;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.Controles {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 280px;
+    background: rgba(3, 3, 3, 0.5);
+    border: rgba(251, 249, 249, 0.2) solid 6px;
+    padding: 12px;
+    border-radius: 8px;
+    z-index: 10;
+}
+
+.Controles label {
+    display: block;
+    margin-bottom: 10px;
+    color: white;
+}
+
+
+/* Estilos para el menú contraíble */
+
+.Controles.minimized {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    padding: 0;
+    border-radius: 50%;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Controles.minimized label,
+.Controles.minimized input {
+    display: none;
+    width: 1px;
+}
+
+.minimize-btn {
+    background: rgba(113, 78, 78, 0.315);
+    border: none;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    position: absolute;
+    top: 5px;
+    right: 12px;
+    z-index: 20;
+    transition: background 0.2s;
+}
+
+.minimize-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    width: 32px;
+}
+
+
+/* Ajusta la posición cuando el menú está minimizado */
+
+.Controles.minimized .minimize-btn {
+    top: 0.2px;
+    left: 0.2px;
+    right: auto;
+}
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
