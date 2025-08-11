@@ -14,21 +14,6 @@ canvas {
     display: block;
 }
 
-.titulo {
-    position: absolute;
-    top: 30px;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    font-family: 'Comic Sans', Arial, sans-serif;
-    font-size: 3em;
-    color: #d1c1ca;
-    z-index: 100;
-    text-shadow: 0 0 20px #ff69bb;
-    letter-spacing: 2px;
-    font-weight: bold;
-}
-
 .Controles {
     position: absolute;
     top: 10px;
@@ -47,9 +32,7 @@ canvas {
     color: white;
 }
 
-
 /* Estilos para el menú contraíble */
-
 .Controles.minimized {
     width: 40px;
     height: 40px;
@@ -89,13 +72,70 @@ canvas {
     width: 32px;
 }
 
-
 /* Ajusta la posición cuando el menú está minimizado */
-
 .Controles.minimized .minimize-btn {
     top: 0.2px;
     left: 0.2px;
     right: auto;
 }
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+/* ==================== ESTILOS PARA EXPLOSIONES ==================== */
+
+.explosion-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.explosion-word {
+    position: absolute;
+    font-weight: bold;
+    font-size: 24px;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+    white-space: nowrap;
+    font-family: arial;
+}
+
+.explosion-center {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 30px #fff, 0 0 60px rgba(255, 255, 255, 0.8);
+    opacity: 0;
+    animation: centerPulse 0.4s ease-out;
+}
+
+@keyframes centerPulse {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+        box-shadow: 0 0 30px #fff, 0 0 60px rgba(255, 255, 255, 0.8);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(8);
+        box-shadow: 0 0 50px #fff, 0 0 100px rgba(255, 255, 255, 0.6);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(15);
+        box-shadow: 0 0 80px transparent;
+    }
+}
+
+.explosion-particle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: #fff;
+    border-radius: 50%;
+    pointer-events: none;
+}
