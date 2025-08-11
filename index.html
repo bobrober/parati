@@ -12,12 +12,16 @@
     <div class="Controles" id="menuControles">
         <!-- Botón para minimizar el menú -->
         <button class="minimize-btn" id="btnMinimizar" title="Minimizar menú">−</button>
-        <label>velocidad: <input type="range" id="speedcontrol" min="1" max="30" value="10"> </label>
+        <label>velocidad: <input type="range" id="speedcontrol" min="1" max="60" value="10"> </label>
         <label>Texto: <input type="text" id="textoinput" value="Te quiero"> </label>
         <label>Color: <input type="color" id="colorinput" value="#ff69bb"> </label>
-
     </div>
-    <canvas id="MatrixCanvas"> </canvas>
+    
+    <!-- Contenedor para las explosiones -->
+    <div class="explosion-container" id="explosionContainer"></div>
+    
+    <canvas id="MatrixCanvas"></canvas>
+    
     <!-- Script principal para los efectos -->
     <script src="Script.js"></script>
     <script>
