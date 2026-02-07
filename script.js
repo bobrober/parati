@@ -3,7 +3,7 @@ const canvas = document.getElementById("MatrixCanvas");
 const ctx = canvas.getContext("2d");
 
 let speed = 10;
-let message = "Te quiero";
+let message = "Te amo";
 let color = "rgba(255, 105, 187, 1)";
 
 canvas.width = window.innerWidth;
@@ -419,4 +419,5 @@ canvas.addEventListener("click", (e) => {
     const x = e.clientX;
     const y = e.clientY;
     createGrenadeExplosion(x, y);
+
 });
